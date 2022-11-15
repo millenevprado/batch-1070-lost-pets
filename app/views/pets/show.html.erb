@@ -1,0 +1,19 @@
+<div class="container m-5">
+  <h1>Pet info</h1>
+
+  <h2><%= @pet.name %></h2>
+
+  <p><strong>Address:</strong> <%= @pet.address %></p>
+  <p><strong>Species:</strong> <%= @pet.species %></p>
+  <p><strong>Found on:</strong> <%= @pet.found_on %></p>
+
+  <div class="mb-3">
+    <%= link_to 'Edit', edit_pet_path(@pet), class: 'btn btn-secondary'  %>
+
+    <%= link_to 'Delete', pet_path(@pet), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'}, class: 'btn btn-danger' %>
+  </div>
+
+  <%= link_to 'Back', pets_path, class: 'text-decoration-none' %>
+
+
+</div>

@@ -1,0 +1,9 @@
+<div class="container m-5">
+  <h1 class="mb-4 text-center">Pets 🐕🐱🐤🐇</h1>
+  <%= link_to 'Add pet', pets_new_path, class: "btn btn-primary my-4" %>
+  <ul class="list-group">
+    <% @pets.each do |pet| %>
+      <li class="list-group-item "><%= link_to pet.name, pet_path(pet), class: "text-decoration-none" %></li>
+    <% end %>
+  </ul>
+</div>
